@@ -14,6 +14,19 @@
 * (Toujours garder en tête de faire un maximum de vérification avec des affichages d'erreur)
 */
 
+$uri = strtolower($_SERVER["REQUEST_URI"]);
 
+if(!file_exists("../routes.yml")){
+    die("Le fichier ../routes.yml n'existe pas");
+}
+$listOfRoutes = yaml_parse_file("../routes.yml");
+
+$controller = $listOfRoutes[$uri]["controller"];
+$action = $listOfRoutes[$uri]["action"];
+
+require "../Controllers/".$controller.".php";
+
+$objectContoller = new $controller();
+$objectContoller->$action();
 
 
