@@ -1,0 +1,11 @@
+/user/add:
+  controller: "User"
+  action: "register"
+
+/se-connecter:
+  controller: "User"
+  action: "login"
+
+/backoffice:
+  controller: "Backoffice"
+  action: "dashboard"
