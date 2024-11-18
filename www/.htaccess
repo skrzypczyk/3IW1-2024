@@ -1,4 +1,15 @@
 RewriteEngine on
+
+# http://localhost/
+RewriteRule ^$ Public/index.php [L]
+
+# http://localhost/toto -> OK
+# http://localhost/cours -> NOK
+# http://localhost/cours/test -> OK
+# http://localhost/cours/POO.php -> NOK
+# <link rel="stylesheet" href="public/css/style.css">
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . Public/index.php [L]
+
+

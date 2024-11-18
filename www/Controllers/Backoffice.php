@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Controllers;
 class Backoffice
 {
 

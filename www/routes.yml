@@ -6,6 +6,10 @@
   controller: "User"
   action: "login"
 
+/se-deconnecter:
+  controller: "User"
+  action: "logout"
+
 /backoffice:
   controller: "Backoffice"
   action: "dashboard"
