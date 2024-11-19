@@ -13,3 +13,7 @@
 /backoffice:
   controller: "Backoffice"
   action: "dashboard"
+
+/page:
+  controller: "page"
+  action: "show"
